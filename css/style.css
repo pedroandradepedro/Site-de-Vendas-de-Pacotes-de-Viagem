@@ -215,6 +215,22 @@ body {
   z-index: 4;
 }
 
+.header-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: var(--transition);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  padding-block: 15px;
+  z-index: 1;
+}
+
+.header.active .header-top {
+  position: fixed;
+  background: var(--gunmetal);
+}
+
 .header-top .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -242,7 +258,7 @@ body {
 }
 
 .header-top .logo img {
-  max-width: 100px;
+  max-width: 30px;
 }
 
 .header-btn-group {
@@ -326,7 +342,7 @@ body {
 }
 
 .navbar-top .logo img {
-  width: 150px;
+  width: 30px;
 }
 
 .nav-close-btn {
@@ -608,6 +624,24 @@ body {
   font-size: var(--fs-8);
 }
 
+.lugares {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 15px;
+  padding: 10px;
+  width: 100%;
+  color: var(--black-coral);
+  font-size: var(--fs-8);
+  margin-top: 20px;
+}
+
+.lugares-quant {
+  display: flex;
+  gap: 10px;
+}
+
 .meta-box > ion-icon {
   color: var(--bright-navy-blue);
   font-size: 13px;
@@ -646,7 +680,7 @@ body {
 }
 
 .package-card .price {
-  font-size: var(--fs-2);
+  font-size: var(--fs-3);
   font-family: var(--ff-montserrat);
   font-weight: var(--fw-800);
   margin-bottom: 20px;
@@ -707,7 +741,7 @@ body {
 }
 
 .footer-brand img {
-  width: 180px;
+  width: 50px;
 }
 
 .footer-brand .logo {
@@ -855,7 +889,7 @@ address {
   }
 
   .header-top .logo img {
-    max-width: unset;
+    max-width: 50px;
   }
 
   .search-btn {
