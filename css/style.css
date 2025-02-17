@@ -215,22 +215,6 @@ body {
   z-index: 4;
 }
 
-.header-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: var(--transition);
-  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
-  padding-block: 15px;
-  z-index: 1;
-}
-
-.header.active .header-top {
-  position: fixed;
-  background: var(--gunmetal);
-}
-
 .header-top .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
