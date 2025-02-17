@@ -774,18 +774,6 @@ address {
   margin-bottom: 20px;
 }
 
-.footer-form .input-field {
-  background: var(--white);
-  font-size: var(--fs-5);
-  padding: 15px 20px;
-  border-radius: 100px;
-  margin-bottom: 10px;
-}
-
-.footer-form .btn {
-  width: 100%;
-}
-
 /*-----------------------------------*\
    * #GO TO TOP
   \*-----------------------------------*/
