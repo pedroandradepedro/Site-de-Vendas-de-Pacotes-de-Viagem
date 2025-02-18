@@ -46,3 +46,15 @@ window.addEventListener("scroll", function () {
     goTopBtn.classList.remove("active");
   }
 });
+
+function atualizarValorTotal() {
+  let precoTexto = document.querySelector(".price").textContent;
+  let precoPorLugar = parseFloat(precoTexto.replace(/\D/g, ""));
+
+  let quantidade = document.getElementById("quantos").value;
+  let valorTotal = quantidade * precoPorLugar;
+
+  document.getElementById("valorTotal").textContent = `R$ ${valorTotal.toFixed(
+    2
+  )}`;
+}
