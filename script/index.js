@@ -8,5 +8,7 @@ function atualizarValorTotal() {
   let valorTotal = quantidade * precoPorLugar;
 
   const valorTotalStrong = document.querySelector("#valorTotal strong");
-  valorTotalStrong.textContent = "";
+  valorTotalStrong.textContent = `R$ ${valorTotal
+    .toFixed(2)
+    .replace(".", ",")}`;
 }
