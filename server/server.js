@@ -1,5 +1,5 @@
 import express from "express";
-import autenticar from "../secure/autenticar";
+import autenticar from "../secure/autenticar.js";
 
 const porta = 3000;
 const localhost = "0.0.0.0";

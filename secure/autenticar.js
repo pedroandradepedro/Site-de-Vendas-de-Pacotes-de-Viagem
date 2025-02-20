@@ -1,7 +1,7 @@
-export default function autenticar(req, resp, next) {
-  if (req.session.autenticado === true) {
+export default function autenticar(requisicao, resposta, next) {
+  if (requisicao.session.autenticado === true) {
     next();
   } else {
-    resp.redirect("/login");
+    resposta.redirect("/login");
   }
 }

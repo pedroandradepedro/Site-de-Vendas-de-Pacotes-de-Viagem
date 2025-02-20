@@ -2,7 +2,7 @@
   "name": "site-de-vendas-de-pacotes-de-viagem",
   "version": "1.0.0",
   "description": "Trabalho PPI - Atividade 01 - Desenvolvimento de um Site de Vendas de Pacotes de Viagem",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server/server.js",
