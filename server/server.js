@@ -41,12 +41,6 @@ app.post("/login", (requisicao, resposta) => {
   }
 });
 
-// fazendo o logout
-app.get("/logout", (requisicao, resposta) => {
-  requisicao.session.destroy();
-  resposta.redirect("/login.html");
-});
-
 // usando arquivos públicos
 app.use(express.static("./public"));
 
