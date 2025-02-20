@@ -1,15 +1,19 @@
 import express from "express";
+import autenticar from "../secure/autenticar";
+
+const porta = 3000;
+const localhost = "0.0.0.0";
+
 const app = express();
-const port = 3000;
 
-app.get("/", (req, res) => {
-  res.send("Olá Mundo!");
-});
+app.use(express.static("./public"));
 
-app.get("/autenticator", (req, res) => {
-    res.send("Olá Mundo!");
-  });
+app.use(autenticar, express.static("./private"));
 
-app.listen(port, () => {
-  console.log(`App de exemplo esta rodando na porta ${port}`);
+// app.get("/dinheiro", (req, res) => {
+//   res.send("R$ 100,00");
+// });
+
+app.listen(porta, localhost, () => {
+  console.log(`Servidor rodando em http://${localhost}:${porta}`);
 });
