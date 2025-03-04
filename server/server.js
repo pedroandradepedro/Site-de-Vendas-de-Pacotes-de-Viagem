@@ -1,6 +1,8 @@
 import express from "express";
 import autenticar from "../secure/autenticar.js";
 import session from "express-session";
+import pacoteRoutes from "./routes/pacoteroutes.js";
+import sequelize from "./config/database.js";
 
 const porta = 3000;
 const localhost = "0.0.0.0";
@@ -21,6 +23,9 @@ app.use(
     },
   })
 );
+
+app.use(express.json());
+app.use("/api", pacoteRoutes);
 
 // oferecendo o resurso de login
 // tipo de requisição padrão (get)
@@ -49,4 +54,14 @@ app.use(autenticar, express.static("./private"));
 
 app.listen(porta, localhost, () => {
   console.log(`Servidor rodando em http://${localhost}:${porta}`);
+});
+
+app.listen(porta, async () => {
+  try {
+    await sequelize.authenticate();
+    console.log("Conexão com o banco de dados estabelecida com sucesso.");
+    console.log(`Servidor rodando em http://localhost:${porta}`);
+  } catch (error) {
+    console.error("Erro ao conectar com o banco de dados:", error);
+  }
 });
